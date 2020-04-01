@@ -1,0 +1,13 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Paulo André",
+      "birth": 768528000000,
+      "gender": "M",
+      "services": "Musculação",
+      "created_at": 1585771561057
+    }
+  ]
+}
