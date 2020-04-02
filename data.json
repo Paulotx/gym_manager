@@ -1,31 +1,22 @@
 {
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Paulo André",
-      "birth": 765244800000,
-      "gender": "M",
-      "services": "Natação",
-      "created_at": 1585788368770
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Mirelle",
-      "birth": 638928000000,
-      "gender": "F",
-      "services": "Dança",
-      "created_at": 1585788413467
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Teste 10",
+      "name": "Paulo André Teixeira",
       "birth": 768528000000,
+      "gender": "M",
+      "services": "Musculação, Natação",
+      "created_at": 1585857403963
+    },
+    {
+      "id": "2",
+      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
+      "name": "Mirelle Carolyne Marinho",
+      "birth": 783043200000,
       "gender": "F",
-      "services": "Musculação",
-      "created_at": 1585845176067
+      "services": "Dança, Musculação",
+      "created_at": 1585857446267
     }
   ]
 }

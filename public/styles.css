@@ -63,7 +63,6 @@ header {
 }
 
 /* === CARD === */
-
 .card {
     background-color: #FFF;
     width: 800px;
@@ -94,7 +93,6 @@ header {
 }
 
 /* details */
-
 .details {
     padding: 32px;
 }
@@ -145,7 +143,6 @@ header {
 /*=== CREATE ===*/
 
 /* form */
-
 input {
     width: 100%;
     outline: none;
@@ -173,6 +170,7 @@ a.button {
     width: 100%;
     color: #FFF;
     font-size: 16px;
+    cursor: pointer;
 }
 
 a.button {
@@ -192,4 +190,10 @@ form.card .item:nth-child(6){
 .item .sexo span {
     display: flex;
     align-items: initial;
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: lightcoral;
+    cursor: pointer;
 }
