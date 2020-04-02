@@ -1,5 +1,8 @@
 const fs = require('fs');
+const Intl = require('intl');
+
 const data = require('./data.json');
+const { age, date } = require('./utils');
 
 // create
 exports.post = function(req, res) {
@@ -12,6 +15,8 @@ exports.post = function(req, res) {
     }
 
     let { avatar_url, name, birth, gender, services } = req.body;
+
+    console.log(birth);
 
     birth            = Date.parse(birth);
     const created_at = Date.now();
@@ -34,3 +39,40 @@ exports.post = function(req, res) {
     });
 }
 
+// show
+exports.show = function(req, res) {
+    const { id } = req.params;
+
+    const searchInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id;
+    });
+
+    if(!searchInstructor) return res.send("Instructor not found!");
+
+    const instructor = {
+        ...searchInstructor,
+        age: age(searchInstructor.birth),
+        services: searchInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat("pt-BR").format(searchInstructor.created_at),
+    }
+
+    return res.render("instructors/show", { instructor });
+}
+
+// edit
+exports.edit = function(req, res) {
+    const { id } = req.params;
+
+    const searchInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id;
+    });
+
+    if(!searchInstructor) return res.send("Instructor not found!");
+
+    const instructor = {
+        ...searchInstructor,
+        birth: date(searchInstructor.birth)
+    }
+
+    return res.render('instructors/edit', { instructor });
+}
