@@ -4,6 +4,19 @@ const Intl = require('intl');
 const data = require('./data.json');
 const { age, date } = require('./utils');
 
+
+// index
+exports.index = function(req, res) {
+
+    let instructors = data.instructors;
+
+    for(instructor of instructors) {
+        instructor.services = instructor.services.split(",");
+    }
+
+    return res.render("instructors/index", { instructors });
+}
+
 // create
 exports.post = function(req, res) {
     const keys = Object.keys(req.body);
@@ -95,7 +108,8 @@ exports.put = function(req, res) {
     const instructor = {
         ...searchInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
 
     data.instructors[index] = instructor;
@@ -107,7 +121,7 @@ exports.put = function(req, res) {
     })
 }
 
-//delete
+// delete
 exports.delete = function(req, res) {
     const { id } = req.body;
 

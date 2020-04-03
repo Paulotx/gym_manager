@@ -1,22 +1,31 @@
 {
   "instructors": [
     {
-      "id": "1",
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Paulo André Teixeira",
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "name": "Paulo André",
       "birth": 768528000000,
       "gender": "M",
       "services": "Musculação, Natação",
       "created_at": 1585857403963
     },
     {
-      "id": "2",
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": "Mirelle Carolyne Marinho",
-      "birth": 783043200000,
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1575859694244-0b337bf58e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "name": "Mirelle Carolyne",
+      "birth": 656812800000,
       "gender": "F",
       "services": "Dança, Musculação",
       "created_at": 1585857446267
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1557236751-0e44a2c402b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80",
+      "name": "Sofia Marinho ",
+      "birth": 1402704000000,
+      "gender": "F",
+      "services": "Dança, Ballet",
+      "created_at": 1585878266725
     }
   ]
 }
