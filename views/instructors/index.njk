@@ -18,11 +18,7 @@
                             <span style="background-image: url({{ instructor.avatar_url }})"></span>                     
                             {{ instructor.name }}
                         </td>
-                        <td>
-                            {% for service in instructor.services %}
-                                <span>{{ service }}</span> 
-                            {% endfor %}
-                        </td>
+                        <td>{{ instructor.services }}</td>
                         <td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
                     </tr>
                 {% endfor %}

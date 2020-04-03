@@ -7,14 +7,7 @@ const { age, date } = require('./utils');
 
 // index
 exports.index = function(req, res) {
-
-    let instructors = data.instructors;
-
-    for(instructor of instructors) {
-        instructor.services = instructor.services.split(",");
-    }
-
-    return res.render("instructors/index", { instructors });
+    return res.render("instructors/index", { instructors: data.instructors });
 }
 
 // create
