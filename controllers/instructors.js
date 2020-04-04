@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs   = require('fs');
 const Intl = require('intl');
 
 const data = require('../data.json');
@@ -114,7 +114,7 @@ exports.put = function(req, res) {
         if(err) return res.send("Write error!");
 
         return res.redirect(`/instructors/${id}`);
-    })
+    });
 }
 
 // delete
@@ -131,5 +131,5 @@ exports.delete = function(req, res) {
         if(err) return res.send("Write error!");
 
         return res.redirect("/instructors");
-    })
+    });
 }
