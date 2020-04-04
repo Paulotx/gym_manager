@@ -27,8 +27,6 @@ exports.post = function(req, res) {
 
     let { avatar_url, name, birth, gender, services } = req.body;
 
-    console.log(birth);
-
     birth            = Date.parse(birth);
     const created_at = Date.now();
     const id         = Number(data.instructors.length + 1);
@@ -46,7 +44,7 @@ exports.post = function(req, res) {
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if(err) return res.sed("Write file error!");
 
-        return res.redirect("instructors");
+        return res.redirect(`/instructors/${ id }`);
     });
 }
 
@@ -82,7 +80,7 @@ exports.edit = function(req, res) {
 
     const instructor = {
         ...searchInstructor,
-        birth: date(searchInstructor.birth)
+        birth: date(searchInstructor.birth).iso
     }
 
     return res.render('instructors/edit', { instructor });

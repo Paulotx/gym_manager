@@ -1,9 +1,19 @@
-const modalOverlay = document.querySelector('.modal-overlay')
-const cards        = document.querySelectorAll('.card')
+const currentPage = location.pathname;
+const menuItens   = document.querySelectorAll("header .links a");
 
-for (let card of cards) {
-    card.addEventListener('click', function() {
-        const videoId = card.getAttribute('id')
-        window.location.href = `/video?id=${videoId}`
-    })
+for(item of menuItens) {
+    if(currentPage.includes(item.getAttribute("href"))) {
+        item.classList.add("active");
+    }
 }
+
+
+const formDelete = document.querySelector("#form-delete");
+
+formDelete.addEventListener("submit", function(event) {
+    const confirmation = confirm("Deseja Deletar?");
+
+    if(!confirmation) {
+        event.preventDefault();
+    }
+});

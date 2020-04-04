@@ -25,28 +25,28 @@ exports.post = function(req, res) {
         }      
     }
 
-    let { avatar_url, name, birth, gender, services } = req.body;
+    birth  = Date.parse(req.body.birth);
+    let id = 1;
 
-    console.log(birth);
-
-    birth            = Date.parse(birth);
-    const created_at = Date.now();
-    const id         = Number(data.members.length + 1);
+    const lastMember = data.members[data.members.length - 1];
+    
+    if(lastMember) {
+        id = lastMember.id + 1;
+    }
 
     data.members.push({
         id,  
-        avatar_url,
-        name,
+        ...req.body,
         birth,
-        gender,
-        services,        
-        created_at
+
     }); 
+
+    console.log(id);
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if(err) return res.sed("Write file error!");
 
-        return res.redirect("members");
+        return res.redirect(`/members/${ id }`);
     });
 }
 
@@ -62,7 +62,7 @@ exports.show = function(req, res) {
 
     const member = {
         ...searchMember,
-        age: age(searchMember.birth),
+        birth: date(searchMember.birth).birthDay
     }
 
     return res.render("members/show", { member });
@@ -80,7 +80,7 @@ exports.edit = function(req, res) {
 
     const member = {
         ...searchMember,
-        birth: date(searchMember.birth)
+        birth: date(searchMember.birth).iso
     }
 
     return res.render('members/edit', { member });

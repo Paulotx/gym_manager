@@ -17,7 +17,50 @@
       "gender": "F",
       "services": "Dança, Musculação",
       "created_at": 1585857446267
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "name": "Sofia",
+      "birth": 1402704000000,
+      "gender": "F",
+      "services": "Ballet",
+      "created_at": 1585968785821
     }
   ],
-  "members": []
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "name": "Mirelle",
+      "email": "mirelle@gmail.com",
+      "birth": 656812800000,
+      "gender": "F",
+      "blood": "O+",
+      "weight": "51",
+      "height": "158"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "name": "Paulo André",
+      "email": "paulo@gmail.com",
+      "birth": 768528000000,
+      "gender": "M",
+      "blood": "O+",
+      "weight": "95",
+      "height": "180"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "name": "Sofia",
+      "email": "sofia@gmail.com",
+      "birth": 1402704000000,
+      "gender": "F",
+      "blood": "A+",
+      "weight": "20",
+      "height": "114"
+    }
+  ]
 }
